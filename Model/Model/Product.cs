@@ -10,6 +10,25 @@ namespace Model
     /// </summary>
     public class Product
     {
+        public string ManufacturerName { get; set; }
+
+        public string LocationName { get; set; }
+
+        public string ProductName { get; set; }
+
+        public string LotNum { get; set; }
+
+        public string ProductTime { get; set; }
+
+        public string Number { get; set; }
+
+        public string CheckTime { get; set; }
+
+        public bool CheckStatu { get; set; }
+
+        public string MaterialNo { get; set; }
+
+        public string UnitNum { get; set; }
 
 
     }
