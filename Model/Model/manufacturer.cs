@@ -10,6 +10,8 @@ namespace Model
     /// </summary>
     public class Manufacturer
     {
+        public string ManufacturerName { get; set; }
+
 
 
     }
