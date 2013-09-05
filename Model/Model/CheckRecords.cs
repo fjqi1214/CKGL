@@ -8,7 +8,10 @@ namespace Model
     /// <summary>
     /// 盘点
     /// </summary>
-    class CheckRecords
+    public class CheckRecords
     {
+
+
+
     }
 }

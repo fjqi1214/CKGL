@@ -10,5 +10,7 @@ namespace Model
     /// </summary>
     public class Product
     {
+
+
     }
 }
