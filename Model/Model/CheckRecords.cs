@@ -10,7 +10,7 @@ namespace Model
     /// </summary>
     public class CheckRecords
     {
-        public int wori { get; set; }
+
 
 
     }
