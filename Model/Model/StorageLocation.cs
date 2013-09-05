@@ -10,15 +10,11 @@ namespace Model
     /// </summary>
     public class StorageLocation
     {
-        
-        public string ProductName { get; set; }
+
 
         public string ManufacturerName { get; set; }
+        public string ProductName { get; set; }
 
-
-
-
-
-
+    
     }
 }
