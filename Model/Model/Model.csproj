@@ -43,7 +43,7 @@
     <Compile Include="CheckRecords.cs" />
     <Compile Include="ExportStorage.cs" />
     <Compile Include="ImportStorage.cs" />
-    <Compile Include="manufacturer.cs" />
+    <Compile Include="Manufacturer.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StorageLocation.cs" />
