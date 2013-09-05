@@ -12,7 +12,7 @@ namespace Model
     {
         public string UserName { get; set; }
         public string pwd { get; set; }
-        public AuthLevel Auth{get;set;}
+        public AuthLevel Auth { get; set; }
         
     }
 

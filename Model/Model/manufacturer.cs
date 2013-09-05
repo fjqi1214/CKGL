@@ -8,7 +8,8 @@ namespace Model
     /// <summary>
     /// 厂家
     /// </summary>
-    public class manufacturer
+    public class Manufacturer
     {
+
     }
 }
