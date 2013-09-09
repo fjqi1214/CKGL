@@ -15,8 +15,6 @@ namespace Model
 
         public string ManufacturerName { get; set; }
 
-        public string Storage { get; set; }
-
         /// <summary>
         /// 库位名称
         /// </summary>
@@ -30,17 +28,17 @@ namespace Model
         /// </summary>
         public string LotNum { get; set; }
 
-
+        /// <summary>
+        /// 生产时间
+        /// </summary>
         public string ProductTime { get; set; }
 
-
+        /// <summary>
+        /// 数量
+        /// </summary>
         public string Number { get; set; }
 
         public string ArrivalTime { get; set; }
-
-
-        public bool CheckStatu { get; set; }
-
 
         public string MaterialNo { get; set; }
 
