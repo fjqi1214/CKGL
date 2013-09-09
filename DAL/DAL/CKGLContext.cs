@@ -25,6 +25,16 @@ namespace DAL
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+          
+           
+            modelBuilder.Entity<CheckRecord>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<ExportStorage>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<ImportStorage>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<Manufacturer>().HasKey(i => new { i.ManufacturerName });
+            modelBuilder.Entity<Product>().HasKey(i => new { i.ProductName });
+            modelBuilder.Entity<StorageLocation>().HasKey(i => new { i.LocationName });
+            modelBuilder.Entity<User>().HasKey(i => new { i.UserName });
+
             base.OnModelCreating(modelBuilder);
         }
 

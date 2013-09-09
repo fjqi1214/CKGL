@@ -10,12 +10,10 @@ namespace Model
     /// </summary>
     public class Manufacturer
     {
+
         public string ManufacturerName { get; set; }
 
         public virtual ICollection<Product> Products { get; set; }
-
-        public virtual ICollection<ExportStorage> Exports { get; set; }
-
         public virtual ICollection<ImportStorage> Imports { get; set; }
     }
 }
