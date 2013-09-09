@@ -10,6 +10,8 @@ namespace Model
     /// </summary>
     public class CheckRecord
     {
+
+        public string Id { get; set; }
         public string LocationName { get; set; }
 
         public string ProductName { get; set; }

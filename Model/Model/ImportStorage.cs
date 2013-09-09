@@ -11,6 +11,8 @@ namespace Model
     /// </summary>
     public class ImportStorage
     {
+        public string Id { get; set; }
+
         public string ManufacturerName { get; set; }
 
         public string Storage { get; set; }

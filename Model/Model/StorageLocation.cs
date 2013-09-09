@@ -11,6 +11,7 @@ namespace Model
     public class StorageLocation
     {
 
+        public string LocationName { get; set; }
 
         public string ManufacturerName { get; set; }
         public string ProductName { get; set; }
