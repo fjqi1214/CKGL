@@ -7,9 +7,9 @@ namespace Model
 {
 
     /// <summary>
-    /// 入库
+    /// 入库表
     /// </summary>
-    public class ImportStorage
+    public class ImportStorageTable
     {
         public string Id { get; set; }
 

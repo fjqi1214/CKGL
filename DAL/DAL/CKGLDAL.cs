@@ -6,9 +6,13 @@ using Interface;
 using Model;
 namespace DAL
 {
-    public class CKGLDAL:IUserService
+    public class CKGLDAL<T>:ISplitePageQuery<T>,IUserLogin
     {
-
+        private CKGLContext db;
+        public CKGLDAL(CKGLContext db)
+        {
+            this.db = db;
+        }
         #region IUser Members
 
         public User GetUser(string name, string pwd)
@@ -16,6 +20,39 @@ namespace DAL
             return new User { Auth = AuthLevel.privilege, UserName = "admin" };
         }
 
+        public StorageLocationTable New()
+        {
+            return new StorageLocationTable();
+        }
+
         #endregion
+
+
+
+        public IEnumerable<T> MoveNextPage(int pageNum, int size)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<T> MovePreviousPage(int pageNum, int size)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<T> MoveLastPage(int pageNum, int size)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<T> MoveFirstPage(int pageNum, int size)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public long GetCount()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

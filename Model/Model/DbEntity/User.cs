@@ -6,7 +6,7 @@ using System.Text;
 namespace Model
 {
     /// <summary>
-    /// 用户
+    /// 用户表
     /// </summary>
     public class User
     {

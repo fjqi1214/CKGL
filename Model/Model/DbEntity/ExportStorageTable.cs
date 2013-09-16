@@ -6,23 +6,24 @@ using System.Text;
 namespace Model
 {
     /// <summary>
-    /// 盘点
+    /// 出库表
     /// </summary>
-    public class CheckRecord
+    public class ExportStorageTable
     {
-
         public string Id { get; set; }
+
         public string LocationName { get; set; }
 
         public string ProductName { get; set; }
 
-        public bool CheckStatus { get; set; }
-
-        public string LotNum { get; set; }
-
-        public string UnitNumber { get; set; }
 
 
+        public string LotNumber { get; set; }
 
+        public string ExpNum { get; set; }
+
+        public string ExpTime { get; set; }
+
+        public string UnitNum { get; set; }
     }
 }

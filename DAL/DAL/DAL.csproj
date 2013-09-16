@@ -48,6 +48,7 @@
     <Compile Include="CKGLContext.cs" />
     <Compile Include="CKGLDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageLocationCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

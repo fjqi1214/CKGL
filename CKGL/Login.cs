@@ -14,26 +14,27 @@ namespace CKGL
 {
     public partial class Login : Form
     {
-        CKGLContext db = new CKGLContext();
+       
         MangeForm manageForm;
+
+        private CKGLContext db;
         public Login()
         {
             InitializeComponent();
-            //CKGLContext db = new CKGLContext();
+            CKGLContext db = new CKGLContext();
             //db.Users.Add(new User { Auth = AuthLevel.Common, UserName = "fdff" });
 
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            UserLogin login = new UserLogin();
-            login.UserValidate = new CKGLDAL();
-            //用户输入的过滤
+            UserService us = new UserService();
+            us.UserValidate = new CKGLDAL<User>(this.db);
             var name = txtName.Text;
             var pwd = txtPwd.Text;
-            User user = login.Login(name, pwd);
-           
-            if (user == null)
+            bool result = us.Login(name, pwd);
+
+            if (!result)
             {
                 //用户登录失败
                 ShowPrompt("用户名或密码错误！");
@@ -41,7 +42,7 @@ namespace CKGL
             else
             { 
                 //用户登录成功
-                manageForm = new MangeForm(user,this);
+                manageForm = new MangeForm(us, this);
                 manageForm.Show();
                 this.Hide();
                 
