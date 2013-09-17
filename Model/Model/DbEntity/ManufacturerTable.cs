@@ -8,12 +8,18 @@ namespace Model
     /// <summary>
     /// 厂家表
     /// </summary>
-    public class ManufacturerTable
+    public class Manufacturer
     {
-
+        /// <summary>
+        /// 厂家
+        /// </summary>
         public string ManufacturerName { get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
         public string Memo { get; set; }
-        public virtual ICollection<ProductTable> Products { get; set; }
-        public virtual ICollection<ImportStorageTable> Imports { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ImportStorage> Imports { get; set; }
     }
 }

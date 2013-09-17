@@ -20,9 +20,9 @@ namespace DAL
             return new User { Auth = AuthLevel.privilege, UserName = "admin" };
         }
 
-        public StorageLocationTable New()
+        public StorageLocation New()
         {
-            return new StorageLocationTable();
+            return new StorageLocation();
         }
 
         #endregion

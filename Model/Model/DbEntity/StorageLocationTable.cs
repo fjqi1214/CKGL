@@ -8,32 +8,32 @@ namespace Model
     /// <summary>
     /// 库位表
     /// </summary>
-    public class StorageLocationTable
+    public class StorageLocation
     {
 
         /// <summary>
-        /// 库位名称
+        /// 库位
         /// </summary>
         public string LocationName { get; set; }
 
         /// <summary>
-        /// 厂家名称
+        /// 厂家
         /// </summary>
         public string ManufacturerName { get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// 品名
         /// </summary>
         public string ProductName { get; set; }
 
 
-        public virtual ICollection<ProductTable> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
 
-        public virtual ICollection<CheckRecordTable> CheckRecords { get; set; }
+        public virtual ICollection<CheckRecord> CheckRecords { get; set; }
 
-        public virtual ICollection<ExportStorageTable> Exports { get; set; }
+        public virtual ICollection<ExportStorage> Exports { get; set; }
 
-        public virtual ICollection<ImportStorageTable> Imports { get; set; }
+        public virtual ICollection<ImportStorage> Imports { get; set; }
 
 
 

@@ -18,6 +18,8 @@ namespace CKGL
         UserService userS;
         Form parentForm;
         ISplitePage SplitePager;
+        Form register;
+        Form RePwd;
         public MangeForm(UserService us, Form parentForm)
         {
 
@@ -25,7 +27,7 @@ namespace CKGL
             this.userS = us;
             this.parentForm = parentForm;
             SetStorageLocationTab();
-            this.dgvSL.DataSource = this.bS;
+            this.dgvSl.DataSource = this.bS;
             this.bN.BindingSource = this.bS;
 
 
@@ -51,7 +53,7 @@ namespace CKGL
             {
                 case 0:
                     InitialSpliteTool();
-                    SplitePager = new SplitePage<StorageLocationTable>();
+                    SplitePager = new SplitePage<StorageLocation>();
                     break;
                 case 1:
 
@@ -75,23 +77,23 @@ namespace CKGL
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
-            this.bS.DataSource = ((SplitePage<StorageLocationTable>)SplitePager).MoveNextPage();
+            this.bS.DataSource = ((SplitePage<StorageLocation>)SplitePager).MoveNextPage();
         }
 
 
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
-            this.bS.DataSource = ((SplitePage<StorageLocationTable>)SplitePager).MoveFirstPage();
+            this.bS.DataSource = ((SplitePage<StorageLocation>)SplitePager).MoveFirstPage();
         }
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
-            this.bS.DataSource = ((SplitePage<StorageLocationTable>)SplitePager).MovePreviousPage();
+            this.bS.DataSource = ((SplitePage<StorageLocation>)SplitePager).MovePreviousPage();
         }
 
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
         {
-            this.bS.DataSource = ((SplitePage<StorageLocationTable>)SplitePager).MoveLastPage();
+            this.bS.DataSource = ((SplitePage<StorageLocation>)SplitePager).MoveLastPage();
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
@@ -105,9 +107,9 @@ namespace CKGL
         private void SetStorageLocationTab()
         {
             InitialSpliteTool();
-            SplitePager = new SplitePage<StorageLocationModel>();
-            ((SplitePage<StorageLocationModel>)SplitePager).SplitePager = new StorageLocationCollection();
-            this.bS.DataSource = ((SplitePage<StorageLocationModel>)SplitePager).MoveFirstPage();
+            SplitePager = new SplitePage<StorageLocation>();
+            ((SplitePage<StorageLocation>)SplitePager).SplitePager = new StorageLocationCollection();
+            this.bS.DataSource = ((SplitePage<StorageLocation>)SplitePager).MoveFirstPage();
         }
 
         /// <summary>
@@ -157,6 +159,19 @@ namespace CKGL
             cbPageItemNum.SelectedIndex = 0;
         }
 
-      
+        private void 注册用户ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            register = new Register();
+            register.Show();
+        }
+
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RePwd = new RePasswd();
+            RePwd.Show();
+        }
+
+     
+     
     }
 }

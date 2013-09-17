@@ -9,17 +9,17 @@ namespace DAL
 {
     public class CKGLContext:DbContext
     {
-        public DbSet<CheckRecordTable> CheckRecords { get; set; }
+        public DbSet<CheckRecord> CheckRecords { get; set; }
 
-        public DbSet<ExportStorageTable> ExportStorages { get; set; }
+        public DbSet<ExportStorage> ExportStorages { get; set; }
 
-        public DbSet<ImportStorageTable> ImportStorages { get; set; }
+        public DbSet<ImportStorage> ImportStorages { get; set; }
 
-        public DbSet<ManufacturerTable> Manufacturers { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
 
-        public DbSet<ProductTable> Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-        public DbSet<StorageLocationTable> StorageLocations { get; set; }
+        public DbSet<StorageLocation> StorageLocations { get; set; }
 
         public DbSet<User> Users { get; set; }
 
@@ -27,12 +27,12 @@ namespace DAL
         {
           
            
-            modelBuilder.Entity<CheckRecordTable>().HasKey(i => new { i.Id });
-            modelBuilder.Entity<ExportStorageTable>().HasKey(i => new { i.Id });
-            modelBuilder.Entity<ImportStorageTable>().HasKey(i => new { i.Id });
-            modelBuilder.Entity<ManufacturerTable>().HasKey(i => new { i.ManufacturerName });
-            modelBuilder.Entity<ProductTable>().HasKey(i => new { i.ProductName });
-            modelBuilder.Entity<StorageLocationTable>().HasKey(i => new { i.LocationName });
+            modelBuilder.Entity<CheckRecord>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<ExportStorage>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<ImportStorage>().HasKey(i => new { i.Id });
+            modelBuilder.Entity<Manufacturer>().HasKey(i => new { i.ManufacturerName });
+            modelBuilder.Entity<Product>().HasKey(i => new { i.ProductName });
+            modelBuilder.Entity<StorageLocation>().HasKey(i => new { i.LocationName });
             modelBuilder.Entity<User>().HasKey(i => new { i.UserName });
 
             base.OnModelCreating(modelBuilder);

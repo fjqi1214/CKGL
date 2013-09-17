@@ -12,7 +12,7 @@ namespace UnitTest
     {
         static void Main(string[] args)
         {
-            SplitePage<StorageLocationModel> pager = new SplitePage<StorageLocationModel>();
+            SplitePage<StorageLocation> pager = new SplitePage<StorageLocation>();
             pager.SplitePager = new StorageLocationCollection();
 
 
@@ -47,7 +47,7 @@ namespace UnitTest
         /// 测试返回第一页
         /// </summary>
         /// <param name="pager"></param>
-        static private void TestGoFirst(SplitePage<StorageLocationModel> pager)
+        static private void TestGoFirst(SplitePage<StorageLocation> pager)
         {
             var items = pager.MoveFirstPage();
             if (FirstPageIsOk(items, pager.PageSize))
@@ -73,7 +73,7 @@ namespace UnitTest
         /// 测试进入第一页
         /// </summary>
         /// <param name="pager"></param>
-        static private void TestGoNexPage(SplitePage<StorageLocationModel> pager)
+        static private void TestGoNexPage(SplitePage<StorageLocation> pager)
         {
             var currentPage = pager.CurrentPageNum;
             var items = pager.MoveNextPage();
@@ -97,7 +97,7 @@ namespace UnitTest
         }
 
 
-        static private void TestRemainderItems(SplitePage<StorageLocationModel> pager)
+        static private void TestRemainderItems(SplitePage<StorageLocation> pager)
         {
              var totle = new StorageLocationCollection().StorageLocations.Count;
          
@@ -152,7 +152,7 @@ namespace UnitTest
             }
         }
 
-        static private void TestGoToFirstPage(SplitePage<StorageLocationModel> pager)
+        static private void TestGoToFirstPage(SplitePage<StorageLocation> pager)
         {
             var items = pager.MoveFirstPage();
             if (FirstPageIsOk(items, 5))
@@ -175,7 +175,7 @@ namespace UnitTest
 
         }
 
-        static private bool FirstPageIsOk(IEnumerable<StorageLocationModel> models, int size)
+        static private bool FirstPageIsOk(IEnumerable<StorageLocation> models, int size)
         {
             bool rel = true;
             var items = models.ToList();
@@ -204,7 +204,7 @@ namespace UnitTest
             return rel;
         }
 
-        static private bool NextPageIsOk(IEnumerable<StorageLocationModel> models, int size,int currentPageNum)
+        static private bool NextPageIsOk(IEnumerable<StorageLocation> models, int size, int currentPageNum)
         {
             bool rel = true;
             var items = models.ToList();
@@ -227,7 +227,7 @@ namespace UnitTest
         }
 
 
-        static private void TestGoLastPage(SplitePage<StorageLocationModel> pager)
+        static private void TestGoLastPage(SplitePage<StorageLocation> pager)
         {
             var models = pager.MoveLastPage().ToList();
 
